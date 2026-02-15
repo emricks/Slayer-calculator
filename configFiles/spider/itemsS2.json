@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Tarantula Web",
+    "weight": 10000,
+    "table": "Token"
+  },
+  {
+    "name": "Toxic Arrow Poison",
+    "weight": 1800,
+    "table": "Main"
+  },
+  {
+    "name": "Spider Catalyst",
+    "weight": 125,
+    "table": "Main"
+  },
+  {
+    "name": "Bite Rune",
+    "weight": 83,
+    "table": "Extra"
+  }
+]

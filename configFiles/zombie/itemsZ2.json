@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Revenant Flesh",
+    "weight": 10000,
+    "table": "Token"
+  },
+  {
+    "name": "Foul Flesh",
+    "weight": 2000,
+    "table": "Main"
+  },
+  {
+    "name": "Pestilence Rune",
+    "weight": 83,
+    "table": "Extra"
+  },
+  {
+    "name": "Undead Catalyst",
+    "weight": 250,
+    "table": "Main"
+  },
+  {
+    "name": "Revenant Catalyst",
+    "weight": 125,
+    "table": "Main"
+  }
+]

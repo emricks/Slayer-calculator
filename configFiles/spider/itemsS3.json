@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Tarantula Web",
+    "weight": 10000,
+    "table": "Token"
+  },
+  {
+    "name": "Toxic Arrow Poison",
+    "weight": 1800,
+    "table": "Main"
+  },
+  {
+    "name": "Spider Catalyst",
+    "weight": 250,
+    "table": "Main"
+  },
+  {
+    "name": "Bite Rune",
+    "weight": 333,
+    "table": "Extra"
+  },
+  {
+    "name": "Tarantula Catalyst",
+    "weight": 30,
+    "table": "Main"
+  },
+  {
+    "name": "Bane 6",
+    "weight": 25,
+    "table": "Main"
+  },
+  {
+    "name": "Fly Swatter",
+    "weight": 10,
+    "table": "Main"
+  },
+  {
+    "name": "Tarantula Talisman",
+    "weight": 10,
+    "table": "Main"
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Tarantula Web",
+    "weight": 10000,
+    "table": "Token"
+  },
+  {
+    "name": "Toxic Arrow Poison",
+    "weight": 1800,
+    "table": "Main"
+  },
+  {
+    "name": "Spider Catalyst",
+    "weight": 25,
+    "table": "Main"
+  },
+  {
+    "name": "Bite Rune",
+    "weight": 833,
+    "table": "Extra"
+  },
+  {
+    "name": "Tarantula Catalyst",
+    "weight": 60,
+    "table": "Main"
+  },
+  {
+    "name": "Bane 6",
+    "weight": 50,
+    "table": "Main"
+  },
+  {
+    "name": "Fly Swatter",
+    "weight": 30,
+    "table": "Main"
+  },
+  {
+    "name": "Tarantula Talisman",
+    "weight": 30,
+    "table": "Main"
+  },
+  {
+    "name": "Darkness Within Rune",
+    "weight": 100,
+    "table": "Extra"
+  },
+  {
+    "name": "Vial Of Venom",
+    "weight": 20,
+    "table": "Main"
+  },
+  {
+    "name": "Digested Mosquito",
+    "weight": 10,
+    "table": "Main"
+  },
+  {
+    "name": "Tarantula Silk",
+    "weight": 2000,
+    "table": "Main"
+  },
+  {
+    "name": "Shriveled Wasp",
+    "weight": 20,
+    "table": "Main"
+  },
+  {
+    "name": "Ensnared Snail",
+    "weight": 6,
+    "table": "Main"
+  },
+  {
+    "name": "Primordial Eye",
+    "weight": 2,
+    "table": "Main"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Revenant Flesh",
+    "weight": 10000,
+    "table": "Token"
+  },
+  {
+    "name": "Foul Flesh",
+    "weight": 2000,
+    "table": "Main"
+  },
+  {
+    "name": "Pestilence Rune",
+    "weight": 333,
+    "table": "Extra"
+  },
+  {
+    "name": "Undead Catalyst",
+    "weight": 250,
+    "table": "Main"
+  },
+  {
+    "name": "Revenant Catalyst",
+    "weight": 125,
+    "table": "Main"
+  },
+  {
+    "name": "Smite 6",
+    "weight": 50,
+    "table": "Main"
+  },
+  {
+    "name": "Beheaded Horror",
+    "weight": 10,
+    "table": "Main"
+  },
+  {
+    "name": "Revenant Shard",
+    "weight": 100,
+    "table": "Main"
+  }
+]
