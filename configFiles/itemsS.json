@@ -1,77 +1,77 @@
 [
   {
     "name": "Tarantula Web",
-    "weight": 10000,
+    "tierWeights": [10000, 10000, 10000, 10000, 10000],
     "table": "Token"
   },
   {
     "name": "Toxic Arrow Poison",
-    "weight": 1800,
+    "tierWeights": [0, 1800, 1800, 1800, 1800],
     "table": "Main"
   },
   {
     "name": "Spider Catalyst",
-    "weight": 25,
+    "tierWeights": [0, 125, 250, 75, 25],
     "table": "Main"
   },
   {
     "name": "Bite Rune",
-    "weight": 833,
+    "tierWeights": [0, 83, 333, 833, 833],
     "table": "Extra"
   },
   {
-    "name": "Tarantula Catalyst",
-    "weight": 60,
-    "table": "Main"
+  "name": "Tarantula Catalyst",
+  "tierWeights": [0, 0, 30, 45, 60],
+  "table": "Main"
   },
   {
     "name": "Bane 6",
-    "weight": 50,
+    "tierWeights": [0, 0, 25, 50, 50],
     "table": "Main"
   },
   {
     "name": "Fly Swatter",
-    "weight": 30,
+    "tierWeights": [0, 0, 10, 20, 30],
     "table": "Main"
   },
   {
     "name": "Tarantula Talisman",
-    "weight": 30,
+    "tierWeights": [0, 0, 10, 20, 30],
     "table": "Main"
   },
   {
     "name": "Darkness Within Rune",
-    "weight": 100,
+    "tierWeights": [0, 0, 0, 50, 100],
     "table": "Extra"
   },
   {
     "name": "Vial Of Venom",
-    "weight": 20,
+    "tierWeights": [0, 0, 0, 10, 20],
     "table": "Main"
   },
   {
     "name": "Digested Mosquito",
-    "weight": 10,
+    "tierWeights": [0, 0, 0, 7, 10],
     "table": "Main"
   },
   {
     "name": "Tarantula Silk",
-    "weight": 2000,
+    "tierWeights": [0, 0, 0, 0, 2000],
     "table": "Main"
   },
   {
     "name": "Shriveled Wasp",
-    "weight": 20,
+    "tierWeights": [0, 0, 0, 0, 20],
     "table": "Main"
   },
   {
     "name": "Ensnared Snail",
-    "weight": 6,
+    "tierWeights": [0, 0, 0, 0, 6],
     "table": "Main"
   },
   {
     "name": "Primordial Eye",
-    "weight": 2,
+    "tierWeights": [0, 0, 0, 0, 2],
     "table": "Main"
   }
 ]

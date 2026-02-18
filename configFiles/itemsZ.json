@@ -1,77 +1,77 @@
 [
   {
     "name": "Revenant Flesh",
-    "weight": 10000,
+    "tierWeights": [10000, 10000, 10000, 10000, 10000],
     "table": "Token"
   },
   {
     "name": "Foul Flesh",
-    "weight": 2000,
+    "tierWeights": [0, 2000, 2000, 2000, 2000],
     "table": "Main"
   },
   {
     "name": "Pestilence Rune",
-    "weight": 833,
+    "tierWeights": [0, 83, 333, 833, 833],
     "table": "Extra"
   },
   {
     "name": "Undead Catalyst",
-    "weight": 250,
+    "tierWeights": [0, 250, 250, 75, 250],
     "table": "Main"
   },
   {
     "name": "Revenant Catalyst",
-    "weight": 125,
+    "tierWeights": [0, 125, 125, 125, 125],
     "table": "Main"
   },
   {
     "name": "Smite 6",
-    "weight": 50,
+    "tierWeights": [0, 0, 50, 50, 50],
     "table": "Main"
   },
   {
     "name": "Beheaded Horror",
-    "weight": 20,
+    "tierWeights": [0, 0, 10, 20, 20],
     "table": "Main"
   },
   {
     "name": "Revenant Shard",
-    "weight": 200,
+    "tierWeights": [0, 0, 100, 150, 200],
     "table": "Main"
   },
   {
     "name": "Snake Rune",
-    "weight": 20,
+    "tierWeights": [0, 0, 0, 20, 20],
     "table": "Extra"
   },
   {
     "name": "Festering Maggot",
-    "weight": 20,
+    "tierWeights": [0, 0, 0, 10, 20],
     "table": "Extra"
   },
   {
     "name": "Scythe Blade",
-    "weight": 15,
+    "tierWeights": [0, 0, 0, 7, 15],
     "table": "Main"
   },
   {
     "name": "Severed Hand",
-    "weight": 7,
+    "tierWeights": [0, 0, 0, 0, 7],
     "table": "Main"
   },
   {
     "name": "Shard Of The Shredded",
-    "weight": 8,
+    "tierWeights": [0, 0, 0, 0, 8],
     "table": "Main"
   },
   {
     "name": "Warden Heart",
-    "weight": 2,
+    "tierWeights": [0, 0, 0, 0, 2],
     "table": "Main"
   },
   {
     "name": "Revenant Viscera",
-    "weight": 2000,
+    "tierWeights": [0, 0, 0, 0, 2000],
     "table": "Main"
   }
 ]
