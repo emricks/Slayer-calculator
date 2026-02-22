@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Wolf Tooth",
+    "tierWeights": [10000, 10000, 10000, 10000],
+    "table": "Token",
+    "RNGRequired": 500
+  },
+  {
+    "name": "Hamster Wheel",
+    "tierWeights": [0, 2000, 2000, 2000],
+    "table": "Main",
+    "RNGRequired": 3000
+  },
+  {
+    "name": "Spirit Rune",
+    "tierWeights": [0, 83, 333, 833],
+    "table": "Extra",
+    "RNGRequired": 7917
+  },
+  {
+    "name": "Critical 6",
+    "tierWeights": [0, 0, 50, 100],
+    "table": "Main",
+    "RNGRequired": 61634
+  },
+  {
+    "name": "Furball",
+    "tierWeights": [0, 0, 100, 200],
+    "table": "Main",
+    "RNGRequired": 30637
+  },
+  {
+    "name": "Red Claw Egg",
+    "tierWeights": [0, 0, 5, 15],
+    "table": "Main",
+    "RNGRequired": 410900
+  },
+  {
+    "name": "Couture Rune",
+    "tierWeights": [0, 0, 0, 30],
+    "table": "Extra",
+    "RNGRequired": 219833
+  },
+  {
+    "name": "Overflux Capacitor",
+    "tierWeights": [0, 0, 0, 5],
+    "table": "Main",
+    "RNGRequired": 1232700
+  },
+  {
+    "name": "Grizzly Salmon",
+    "tierWeights": [0, 0, 0, 7],
+    "table": "Main",
+    "RNGRequired": 880500
+  }
+]

@@ -2,76 +2,91 @@
   {
     "name": "Tarantula Web",
     "tierWeights": [10000, 10000, 10000, 10000, 10000],
-    "table": "Token"
+    "table": "Token",
+    "RNGRequired": 500
   },
   {
     "name": "Toxic Arrow Poison",
     "tierWeights": [0, 1800, 1800, 1800, 1800],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 3277
   },
   {
     "name": "Spider Catalyst",
     "tierWeights": [0, 125, 250, 75, 25],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 24250
   },
   {
     "name": "Bite Rune",
     "tierWeights": [0, 83, 333, 833, 833],
-    "table": "Extra"
+    "table": "Extra",
+    "RNGRequired": 7657
   },
   {
-  "name": "Tarantula Catalyst",
-  "tierWeights": [0, 0, 30, 45, 60],
-  "table": "Main"
+    "name": "Tarantula Catalyst",
+    "tierWeights": [0, 0, 30, 45, 60],
+    "table": "Main",
+    "RNGRequired": 117108
   },
   {
     "name": "Bane 6",
     "tierWeights": [0, 0, 25, 50, 50],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 120268
   },
   {
     "name": "Fly Swatter",
     "tierWeights": [0, 0, 10, 20, 30],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 234216
   },
   {
     "name": "Tarantula Talisman",
     "tierWeights": [0, 0, 10, 20, 30],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 234216
   },
   {
     "name": "Darkness Within Rune",
     "tierWeights": [0, 0, 0, 50, 100],
-    "table": "Extra"
+    "table": "Extra",
+    "RNGRequired": 74930
   },
   {
     "name": "Vial Of Venom",
     "tierWeights": [0, 0, 0, 10, 20],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 351325
   },
   {
     "name": "Digested Mosquito",
     "tierWeights": [0, 0, 0, 7, 10],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 702650
   },
   {
     "name": "Tarantula Silk",
     "tierWeights": [0, 0, 0, 0, 2000],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 3513
   },
   {
     "name": "Shriveled Wasp",
     "tierWeights": [0, 0, 0, 0, 20],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 351325
   },
   {
     "name": "Ensnared Snail",
     "tierWeights": [0, 0, 0, 0, 6],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 1171083
   },
   {
     "name": "Primordial Eye",
     "tierWeights": [0, 0, 0, 0, 2],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 3513250
   }
 ]

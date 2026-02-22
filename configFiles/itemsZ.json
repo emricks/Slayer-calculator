@@ -2,76 +2,91 @@
   {
     "name": "Revenant Flesh",
     "tierWeights": [10000, 10000, 10000, 10000, 10000],
-    "table": "Token"
+    "table": "Token",
+    "RNGRequired": 500
   },
   {
     "name": "Foul Flesh",
     "tierWeights": [0, 2000, 2000, 2000, 2000],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 3093
   },
   {
     "name": "Pestilence Rune",
     "tierWeights": [0, 83, 333, 833, 833],
-    "table": "Extra"
+    "table": "Extra",
+    "RNGRequired": 7977
   },
   {
     "name": "Undead Catalyst",
     "tierWeights": [0, 250, 250, 75, 250],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 24750
   },
   {
     "name": "Revenant Catalyst",
     "tierWeights": [0, 125, 125, 125, 125],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 49500
   },
   {
     "name": "Smite 6",
     "tierWeights": [0, 0, 50, 50, 50],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 124370
   },
   {
     "name": "Beheaded Horror",
     "tierWeights": [0, 0, 10, 20, 20],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 310925
   },
   {
     "name": "Revenant Shard",
     "tierWeights": [0, 0, 100, 150, 200],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 36742
   },
   {
     "name": "Snake Rune",
     "tierWeights": [0, 0, 0, 20, 20],
-    "table": "Extra"
+    "table": "Extra",
+    "RNGRequired": 332250
   },
   {
     "name": "Festering Maggot",
     "tierWeights": [0, 0, 0, 10, 20],
-    "table": "Extra"
+    "table": "Extra",
+    "RNGRequired": 367424
   },
   {
     "name": "Scythe Blade",
     "tierWeights": [0, 0, 0, 7, 15],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 489900
   },
   {
     "name": "Severed Hand",
     "tierWeights": [0, 0, 0, 0, 7],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 1049785
   },
   {
     "name": "Shard Of The Shredded",
     "tierWeights": [0, 0, 0, 0, 8],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 918562
   },
   {
     "name": "Warden Heart",
     "tierWeights": [0, 0, 0, 0, 2],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 3631749
   },
   {
     "name": "Revenant Viscera",
     "tierWeights": [0, 0, 0, 0, 2000],
-    "table": "Main"
+    "table": "Main",
+    "RNGRequired": 3674
   }
 ]
