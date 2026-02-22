@@ -8,8 +8,9 @@ public class ItemTest {
     @Test
     @DisplayName("Testing multiplyWeight returns correct value")
     public void testMultiplyWeight() {
-        Item item = new Item("Example", 123, "Main");
-        item.multiplyWeight(1.05921);
-        Assertions.assertEquals(130.28283, item.getWeight(), 0.000001);
+        Item item = new Item("Example", new double[]{12, 74, 123, 96, 59}, "Main", 11111);
+        item.multiplyWeight(1.05921, 3);
+        Assertions.assertEquals(130.28283, item.getWeight(3), 0.000001);
+        Assertions.assertEquals(59, item.getWeight(5));
     }
 }

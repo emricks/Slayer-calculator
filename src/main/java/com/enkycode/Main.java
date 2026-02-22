@@ -10,18 +10,15 @@ public class Main {
         int tier = getTier(slayer, false, 0);
 
         assert slayer != null;
-        Drops calculator = switch (slayer) {
-            case Z -> new RevDrops(tier);
-            case S -> new TaraDrops(tier);
-            default -> new RevDrops(tier);
-        };
+        Drops calculator = new SlayerDrops(slayer, tier);
         System.out.println("How much RNG Meter XP do you have? (Enter 0 if your meter is not selected on the drop.)");
         int progress = input.nextInt();
         System.out.println("How much magic find do you have?");
         double mf = input.nextInt();
         input.nextLine();
         boolean mfBoost = getMayor();
-        mf *= mfBoost ? (mf*1.2)+20 : 1;
+        mf *= mfBoost ? (mf*1.2+20) : 1;
+
         calculator.printResults(progress, mf, slayer);
     }
 

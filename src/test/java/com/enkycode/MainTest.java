@@ -14,12 +14,10 @@ public class MainTest {
     @Test
     @DisplayName("Testing getSlayer() works correctly.")
     public void testGetSlayer() throws Exception {
-        String input = "ahwpfh0372hafh";
-        String output = SystemLambda.tapSystemOut(() -> Main.getSlayer(true, input));
+        String output = SystemLambda.tapSystemOut(() -> Main.getSlayer(true, "iajwfj0w001-"));
         Assertions.assertEquals("Invalid slayer. Please try again.", output.split("\n")[7]);
-
-        String input2 = "S";
-        Assertions.assertEquals(Slayers.S, Main.getSlayer(true, input2));
+        Assertions.assertEquals(Slayers.S, Main.getSlayer(true, "S"));
+        Assertions.assertEquals(Slayers.B, Main.getSlayer(false, "B"));
     }
 
     @ParameterizedTest
