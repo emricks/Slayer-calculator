@@ -11,8 +11,11 @@ public class Main {
 
         assert slayer != null;
         Drops calculator = new SlayerDrops(slayer, tier);
-        System.out.println("How much RNG Meter XP do you have? (Enter 0 if your meter is not selected on the drop.)");
-        int progress = input.nextInt();
+        int progress = 0;
+        if (calculator.isRngActive()) {
+            System.out.println("How much RNG Meter XP do you have?");
+            progress = input.nextInt();
+        }
         System.out.println("How much magic find do you have?");
         double mf = input.nextInt();
         input.nextLine();
@@ -45,7 +48,7 @@ public class Main {
         while (true) {
             if (slayer == Slayers.Z || slayer == Slayers.S || slayer == Slayers.V) {
                 System.out.println("Choose a tier 1-5.");
-                tier = in == 0 ? input.nextInt() : in;
+                tier = in == 0 ? (int) input.nextDouble() : in;
                 if (1 <= tier && tier <= 5) {
                     break;
                 } else {
@@ -54,7 +57,7 @@ public class Main {
                 }
             } else {
                 System.out.println("Choose a tier 1-4.");
-                tier = in == 0 ? input.nextInt() : in;
+                tier = in == 0 ? (int) input.nextDouble() : in;
                 if (1 <= tier && tier <= 4) {
                     break;
                 } else {
