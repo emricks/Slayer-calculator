@@ -6,8 +6,8 @@ public class Main {
     private static final Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Slayers slayer = getSlayer(false, "");
-        int tier = getTier(slayer, false, 0);
+        Slayers slayer = getSlayer();
+        int tier = getTier(slayer);
 
         assert slayer != null;
         Drops calculator = new SlayerDrops(slayer, tier);
@@ -25,48 +25,95 @@ public class Main {
         calculator.printResults(progress, mf, slayer);
     }
 
-    public static Slayers getSlayer(boolean testing, String in) {
+    public static Slayers getSlayer() {
         Slayers slayer;
         while (true) {
-            System.out.println("Choose a Slayer:");
+            System.out.println("Choose a slayer:");
             for (Slayers s : Slayers.values()) {
                 System.out.println(s.fromEnumFormat());
             }
             try {
-                slayer = Slayers.valueOf(in.isEmpty() ? input.next() : in);
-                break;
+                slayer = Slayers.valueOf(input.nextLine());
+                return slayer;
             } catch (IllegalArgumentException e) {
                 System.out.println("Invalid slayer. Please try again.");
-                if (testing) {return null;}
             }
         }
-        return slayer;
     }
 
-    public static int getTier(Slayers slayer, boolean testing, int in) {
+    public static Slayers getSlayerTesting(String in) {
+        Slayers slayer;
+        try {
+            slayer = Slayers.valueOf(in.toUpperCase().substring(0, 1));
+            return slayer;
+        } catch (IllegalArgumentException e) {
+            return null;
+        }
+    }
+
+    public static int getTier(Slayers slayer) {
         int tier;
         while (true) {
             if (slayer == Slayers.Z || slayer == Slayers.S || slayer == Slayers.V) {
+
                 System.out.println("Choose a tier 1-5.");
-                tier = in == 0 ? (int) input.nextDouble() : in;
-                if (1 <= tier && tier <= 5) {
-                    break;
-                } else {
-                    System.out.println("Invalid tier for this slayer type. Please try again.");
-                    if (testing) {return 0;}
+                String in = input.nextLine();
+
+                try {
+                    tier = Integer.parseInt(in);
+                    if (tier >= 1 && tier <= 5) {
+                        return tier;
+                    } else {
+                        System.out.println("Invalid tier. Please try again.");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid tier. Please try again.");
                 }
+
             } else {
+
                 System.out.println("Choose a tier 1-4.");
-                tier = in == 0 ? (int) input.nextDouble() : in;
-                if (1 <= tier && tier <= 4) {
-                    break;
-                } else {
-                    System.out.println("Invalid tier for this slayer type. Please try again.");
-                    if (testing) {return 0;}
+                String in = input.nextLine();
+
+                try {
+                    tier = Integer.parseInt(in);
+                    if (tier >= 1 && tier <= 4) {
+                        return tier;
+                    } else {
+                        System.out.println("Invalid tier. Please try again.");
+                    }
+                }  catch (NumberFormatException e) {
+                    System.out.println("Invalid tier. Please try again.");
                 }
+
             }
         }
-        return tier;
+    }
+    public static int getTierTesting(Slayers slayer, String in) {
+        int tier;
+        if (slayer == Slayers.Z || slayer == Slayers.S || slayer == Slayers.V) {
+            try {
+                tier = Integer.parseInt(in);
+            } catch (NumberFormatException e) {
+                return -1;
+            }
+            if (1 <= tier && tier <= 5) {
+                return tier;
+            } else {
+                return -1;
+            }
+        } else {
+            try {
+                tier = Integer.parseInt(in);
+            } catch (NumberFormatException e) {
+                return -1;
+            }
+            if (1 <= tier && tier <= 4) {
+                return tier;
+            } else {
+                return -1;
+            }
+        }
     }
 
     public static boolean getMayor() {

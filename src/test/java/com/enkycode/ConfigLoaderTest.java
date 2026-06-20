@@ -25,23 +25,25 @@ public class ConfigLoaderTest {
     }
     public static Stream<Arguments> testArgs() {
         return Stream.of(
-                Arguments.of(13, 5, Slayers.Z, new Item("Warden Heart", new double[]{0, 0, 0, 0, 2}, "Main", 3631749, 7)),
+                Arguments.of(14, 5, Slayers.Z, new Item("Revenant Viscera", new double[]{0, 0, 0, 0, 2000}, "Main", 3674, 7)),
+                Arguments.of(7, 3, Slayers.Z, new Item("Revenant Shard", new double[]{0, 0, 100, 150, 200}, "Main", 36742, 0)),
                 Arguments.of(2, 2, Slayers.Z, new Item("Pestilence Rune", new double[]{0, 83, 333, 833, 833}, "Extra", 7977, 2)),
-                Arguments.of(6, 4, Slayers.Z, new Item("Beheaded Horror", new double[]{0, 0, 10, 20, 20}, "Main", 310925, 5)),
 
-                Arguments.of(5, 3, Slayers.S, new Item("Bane 6", new double[]{0, 0, 25, 50, 50}, "Main", 120268, 4)),
-                Arguments.of(0, 1, Slayers.S, new Item("Tarantula Web", new double[]{10000, 10000, 10000, 10000, 10000}, "Token", 500, 0)),
-                Arguments.of(8, 4, Slayers.S, new Item("Darkness Within Rune", new double[]{0, 0, 0, 50, 100}, "Extra", 74930, 0)),
+                Arguments.of(14, 5, Slayers.S, new Item("Primordial Eye", new double[]{0, 0, 0, 0, 2}, "Main", 3513250, 7)),
+                Arguments.of(7, 3, Slayers.S, new Item("Tarantula Talisman", new double[]{0, 0, 10, 20, 30}, "Main", 234216, 6)),
+                Arguments.of(3, 2, Slayers.S, new Item("Bite Rune", new double[]{0, 83, 333, 833, 833}, "Extra", 7657, 0)),
 
-                Arguments.of(1, 2, Slayers.W, new Item("Hamster Wheel", new double[]{0, 2000, 2000, 2000}, "Main", 3000, 0)),
-                Arguments.of(7, 4, Slayers.W, new Item("Overflux Capacitor", new double[]{0, 0, 0, 5}, "Main", 1232700, 7)),
-                Arguments.of(2, 3, Slayers.W, new Item("Spirit Rune", new double[]{0, 83, 333, 833}, "Extra", 7917, 2)),
+                Arguments.of(8, 4, Slayers.W, new Item("Grizzly Salmon", new double[]{0, 0, 0, 7}, "Main", 880500, 7)),
+                Arguments.of(5, 3, Slayers.W, new Item("Red Claw Egg", new double[]{0, 0, 5, 15}, "Main", 410900, 5)),
+                Arguments.of(2, 2, Slayers.W, new Item("Spirit Rune", new double[]{0, 83, 333, 833}, "Extra", 7917, 2)),
 
-                Arguments.of(2, 3, Slayers.E, new Item("Summoning Eye", new double[]{0, 80, 80, 80}, "Main", 74250, 1)),
-                Arguments.of(9, 4, Slayers.E, new Item("Smarty Pants", new double[]{0, 0, 0, 250}, "Main", 28338, 5)),
-                Arguments.of(3, 3, Slayers.E, new Item("Endersnake Rune", new double[]{0, 0, 333, 800}, "Extra", 9438, 0)),
+                Arguments.of(18, 4, Slayers.E, new Item("Ender Slayer 7", new double[]{0, 0, 0, 2}, "Main", 3542250, 7)),
+                Arguments.of(7, 3, Slayers.E, new Item("Hazmat Enderman", new double[]{0, 0, 140, 220}, "Main", 32202, 4)),
+                Arguments.of(0, 1, Slayers.E, new Item("Null Sphere", new double[]{10000, 10000, 10000, 10000}, "Token", 500, 0)),
 
-                Arguments.of(5, 3, Slayers.E, new Item("Transmission Tuner", new double[]{0, 0, 300, 300}, "Main", 22366, 3))
+                Arguments.of(8, 5, Slayers.V, new Item("The One", new double[]{0, 0, 0, 0, 3}, "Main", 12525, 5)),
+                Arguments.of(5, 3, Slayers.V, new Item("Guardian Lucky Block", new double[]{0, 0, 10, 10, 10}, "Main", 3600, 4)),
+                Arguments.of(0, 1, Slayers.V, new Item("Coven Seal", new double[]{100, 100, 100, 100, 100}, "Token", 250, 0))
         );
     }
 }

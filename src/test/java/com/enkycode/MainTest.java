@@ -1,9 +1,6 @@
 package com.enkycode;
 
-import com.github.stefanbirkner.systemlambda.SystemLambda;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -11,31 +8,36 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 public class MainTest {
-    @Test
-    @DisplayName("Testing getSlayer() works correctly.")
-    public void testGetSlayer() throws Exception {
-        String output = SystemLambda.tapSystemOut(() -> Main.getSlayer(true, "iajwfj0w001-"));
-        Assertions.assertEquals("Invalid slayer. Please try again.", output.split("\n")[7]);
-        Assertions.assertEquals(Slayers.S, Main.getSlayer(true, "S"));
-        Assertions.assertEquals(Slayers.B, Main.getSlayer(false, "B"));
+    @ParameterizedTest
+    @MethodSource("testSlayerArgs")
+    public void testGetSlayer(String input, Slayers expected) {
+        Slayers actual = Main.getSlayerTesting(input);
+        Assertions.assertEquals(expected, actual);
+    }
+    private static Stream<Arguments> testSlayerArgs() {
+        return Stream.of(
+                Arguments.of("pa9w8hf", null), // Random garbage
+                Arguments.of("H", null), // Nonexistent slayer
+                Arguments.of("s", Slayers.S), // Lowercase
+                Arguments.of("blaze", Slayers.B), // Full word
+                Arguments.of("Z", Slayers.Z) // Normal
+        );
     }
 
     @ParameterizedTest
-    @MethodSource("testArgs")
-    public void testGetTier(int input, Slayers slayer, boolean works) throws Exception {
-        if (!works) {
-            String output = SystemLambda.tapSystemOut(() -> Main.getTier(slayer, true, input));
-            Assertions.assertEquals("Invalid tier for this slayer type. Please try again.", output.split("\n")[1]);
-        } else {
-            Assertions.assertEquals(input, Main.getTier(slayer, true, input));
-        }
+    @MethodSource("testTierArgs")
+    public void testGetTier(String input, Slayers slayer, int expected) {
+        int tier = Main.getTierTesting(slayer, input);
+        Assertions.assertEquals(expected, tier);
     }
-    public static Stream<Arguments> testArgs() {
+    private static Stream<Arguments> testTierArgs() {
         return Stream.of(
-                Arguments.of(100, Slayers.Z, false),
-                Arguments.of(5, Slayers.E, false),
-                Arguments.of(2, Slayers.V, true),
-                Arguments.of(5, Slayers.S, true)
+                Arguments.of("100", Slayers.Z, -1), // Too big
+                Arguments.of("-2", Slayers.E, -1), // Too small
+                Arguments.of("3.7", Slayers.V, -1), // Decimal
+                Arguments.of("5", Slayers.W, -1), // Too big for some
+                Arguments.of("1", Slayers.B, 1), // Correct for all
+                Arguments.of("5", Slayers.S, 5) // Correct for some
         );
     }
 }
