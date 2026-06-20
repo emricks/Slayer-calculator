@@ -3,114 +3,133 @@
     "name": "Null Sphere",
     "tierWeights": [10000, 10000, 10000, 10000],
     "table": "Token",
-    "RNGRequired": 500
+    "RNGRequired": 500,
+    "level": 0
   },
   {
     "name": "Twilight Arrow Poison",
     "tierWeights": [0, 1800, 1800, 1800],
     "table": "Main",
-    "RNGRequired": 3300
+    "RNGRequired": 3300,
+    "level": 0
   },
   {
     "name": "Summoning Eye",
     "tierWeights": [0, 80, 80, 80],
     "table": "Main",
-    "RNGRequired": 74250
+    "RNGRequired": 74250,
+    "level": 1
   },
   {
     "name": "Endersnake Rune",
     "tierWeights": [0, 0, 333, 800],
     "table": "Extra",
-    "RNGRequired": 9438
+    "RNGRequired": 9438,
+    "level": 0
   },
   {
     "name": "Mana Steal",
     "tierWeights": [0, 0, 600, 600],
     "table": "Main",
-    "RNGRequired": 11183
+    "RNGRequired": 11183,
+    "level": 2
   },
   {
     "name": "Transmission Tuner",
     "tierWeights": [0, 0, 300, 300],
     "table": "Main",
-    "RNGRequired": 22366
+    "RNGRequired": 22366,
+    "level": 3
   },
   {
     "name": "Null Atom",
     "tierWeights": [0, 0, 500, 700],
     "table": "Main",
-    "RNGRequired": 10120
+    "RNGRequired": 10120,
+    "level": 4
   },
   {
     "name": "Hazmat Enderman",
     "tierWeights": [0, 0, 140, 220],
     "table": "Main",
-    "RNGRequired": 32202
+    "RNGRequired": 32202,
+    "level": 4
   },
   {
     "name": "Pocket Espresso Machine",
     "tierWeights": [0, 0, 0, 55],
     "table": "Main",
-    "RNGRequired": 128809
+    "RNGRequired": 128809,
+    "level": 4
   },
   {
     "name": "Smarty Pants",
     "tierWeights": [0, 0, 0, 250],
     "table": "Main",
-    "RNGRequired": 28338
+    "RNGRequired": 28338,
+    "level": 5
   },
   {
     "name": "End Rune",
     "tierWeights": [0, 0, 0, 100],
     "table": "Extra",
-    "RNGRequired": 75505
+    "RNGRequired": 75505,
+    "level": 5
   },
   {
     "name": "Handy Blood Chalice",
     "tierWeights": [0, 0, 0, 25],
     "table": "Main",
-    "RNGRequired": 283380
+    "RNGRequired": 283380,
+    "level": 5
   },
   {
     "name": "Sinful Dice",
     "tierWeights": [0, 0, 0, 65],
     "table": "Main",
-    "RNGRequired": 108992
+    "RNGRequired": 108992,
+    "level": 6
   },
   {
     "name": "Exceedingly Rare Ender Artifact Upgrade",
     "tierWeights": [0, 0, 0, 4],
     "table": "Main",
-    "RNGRequired": 1771125
+    "RNGRequired": 1771125,
+    "level": 6
   },
   {
     "name": "Void Conquerer Skin",
     "tierWeights": [0, 0, 0, 25],
     "table": "Extra",
-    "RNGRequired": 302020
+    "RNGRequired": 302020,
+    "level": 7
   },
   {
     "name": "Etherwarp Merger",
     "tierWeights": [0, 0, 0, 60],
     "table": "Main",
-    "RNGRequired": 118075
+    "RNGRequired": 118075,
+    "level": 7
   },
   {
     "name": "Judgement Core",
     "tierWeights": [0, 0, 0, 8],
     "table": "Main",
-    "RNGRequired": 885562
+    "RNGRequired": 885562,
+    "level": 7
   },
   {
     "name": "Enchant Rune",
     "tierWeights": [0, 0, 0, 7],
     "table": "Extra",
-    "RNGRequired": 1078642
+    "RNGRequired": 1078642,
+    "level": 7
   },
   {
     "name": "Ender Slayer 7",
     "tierWeights": [0, 0, 0, 2],
     "table": "Main",
-    "RNGRequired": 3542250
+    "RNGRequired": 3542250,
+    "level": 7
   }
 ]

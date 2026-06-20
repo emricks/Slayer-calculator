@@ -3,48 +3,57 @@
     "name": "Coven Seal",
     "tierWeights": [100, 100, 100, 100, 100],
     "table": "Token",
-    "RNGRequired": 250
+    "RNGRequired": 250,
+    "level": 0
   },
   {
     "name": "Quantum Book Bundle",
     "tierWeights": [0, 20, 20, 20, 20],
     "table": "Main",
-    "RNGRequired": 18750
+    "RNGRequired": 18750,
+    "level": 2
   },
   {
     "name": "Soultwist Rune",
     "tierWeights": [0, 20, 20, 20, 20],
     "table": "Extra",
-    "RNGRequired": 0
+    "RNGRequired": 0,
+    "level": 2
   },
   {
     "name": "Bubba Blister",
     "tierWeights": [0, 15, 15, 15, 15],
-    "table": "Main"
+    "table": "Main",
+    "level": 3
   },
   {
     "name": "Chocolate Chip",
     "tierWeights": [0, 15, 15, 15, 15],
-    "table": "Main"
+    "table": "Main",
+    "level": 3
   },
   {
     "name": "Guardian Lucky Block",
     "tierWeights": [0, 0, 10, 10, 10],
-    "table": "Main"
+    "table": "Main",
+    "level": 4
   },
   {
     "name": "Burger",
     "tierWeights": [0, 0, 0, 2, 2],
-    "table": "Main"
+    "table": "Main",
+    "level": 5
   },
   {
     "name": "Unfanged Vampire Part",
     "tierWeights": [0, 0, 0, 2, 2],
-    "table": "Main"
+    "table": "Main",
+    "level": 5
   },
   {
     "name": "The One",
     "tierWeights": [0, 0, 0, 0, 3],
-    "table": "Main"
+    "table": "Main",
+    "level": 5
   }
 ]

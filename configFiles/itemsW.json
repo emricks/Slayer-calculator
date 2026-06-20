@@ -3,54 +3,63 @@
     "name": "Wolf Tooth",
     "tierWeights": [10000, 10000, 10000, 10000],
     "table": "Token",
-    "RNGRequired": 500
+    "RNGRequired": 500,
+    "level": 0
   },
   {
     "name": "Hamster Wheel",
     "tierWeights": [0, 2000, 2000, 2000],
     "table": "Main",
-    "RNGRequired": 3000
+    "RNGRequired": 3000,
+    "level": 0
   },
   {
     "name": "Spirit Rune",
     "tierWeights": [0, 83, 333, 833],
     "table": "Extra",
-    "RNGRequired": 7917
+    "RNGRequired": 7917,
+    "level": 2
   },
   {
     "name": "Critical 6",
     "tierWeights": [0, 0, 50, 100],
     "table": "Main",
-    "RNGRequired": 61634
+    "RNGRequired": 61634,
+    "level": 4
   },
   {
     "name": "Furball",
     "tierWeights": [0, 0, 100, 200],
     "table": "Main",
-    "RNGRequired": 30637
+    "RNGRequired": 30637,
+    "level": 4
   },
   {
     "name": "Red Claw Egg",
     "tierWeights": [0, 0, 5, 15],
     "table": "Main",
-    "RNGRequired": 410900
+    "RNGRequired": 410900,
+    "level": 5
   },
   {
     "name": "Couture Rune",
     "tierWeights": [0, 0, 0, 30],
     "table": "Extra",
-    "RNGRequired": 219833
+    "RNGRequired": 219833,
+    "level": 6
   },
   {
     "name": "Overflux Capacitor",
     "tierWeights": [0, 0, 0, 5],
     "table": "Main",
-    "RNGRequired": 1232700
+    "RNGRequired": 1232700,
+    "level": 7
   },
   {
     "name": "Grizzly Salmon",
     "tierWeights": [0, 0, 0, 7],
     "table": "Main",
-    "RNGRequired": 880500
+    "RNGRequired": 880500,
+    "level": 7
   }
 ]
