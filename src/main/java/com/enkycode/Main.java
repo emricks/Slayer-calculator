@@ -7,10 +7,10 @@ public class Main {
 
     public static void main(String[] args) {
         Slayers slayer = getSlayer();
+        int level = getLevel(slayer);
         int tier = getTier(slayer);
 
-        assert slayer != null;
-        Drops calculator = new SlayerDrops(slayer, tier);
+        Drops calculator = new SlayerDrops(slayer, tier, level);
         int progress = 0;
         if (calculator.isRngActive()) {
             System.out.println("How much RNG Meter XP do you have?");
@@ -132,5 +132,34 @@ public class Main {
         }
     }
 
-
+    public static int getLevel(Slayers slayer) {
+        int level;
+        while (true) {
+            System.out.println("What slayer level are you?");
+            String in = input.nextLine();
+            if (slayer == Slayers.V) {
+                try {
+                    level = Integer.parseInt(in);
+                    if (level >= 0 && level <= 5) {
+                        return level;
+                    } else {
+                        System.out.println("Invalid level for this slayer. Please try again.");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid level for this slayer. Please try again.");
+                }
+            } else {
+                try {
+                    level = Integer.parseInt(in);
+                    if (level >= 0 && level <= 9) {
+                        return level;
+                    } else {
+                        System.out.println("Invalid level for this slayer. Please try again.");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid level for this slayer. Please try again.");
+                }
+            }
+        }
+    }
 }

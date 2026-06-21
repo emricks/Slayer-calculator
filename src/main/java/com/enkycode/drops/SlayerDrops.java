@@ -3,6 +3,7 @@ package com.enkycode.drops;
 import com.enkycode.ConfigLoader;
 import com.enkycode.Slayers;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -14,21 +15,24 @@ public class SlayerDrops implements Drops{
     private boolean rngActive = true;
     private final int tier;
     private final Slayers slayer;
+    private final int level;
 
     public boolean isRngActive() {
         return rngActive;
     }
 
-    public SlayerDrops(Slayers slayer, int tier) {
+    public SlayerDrops(Slayers slayer, int tier, int level) {
         this.tier = tier;
         this.slayer = slayer;
+        this.level = level;
         makeDrops();
         printDrops();
     }
 
-    public SlayerDrops(Slayers slayer, int tier, String calculateItem, String meteredItem) {
+    public SlayerDrops(Slayers slayer, int tier, int level, String calculateItem, String meteredItem) {
         this.tier = tier;
         this.slayer = slayer;
+        this.level = level;
         makeDrops();
         selectedItem = parseItem(calculateItem);
         rngItem = parseItem(meteredItem);
@@ -47,7 +51,12 @@ public class SlayerDrops implements Drops{
     private void makeDrops() {
         ConfigLoader cLoader = new ConfigLoader(slayer);
         totalItems = cLoader.loadItems();
-        items = totalItems.subList(0, slayer.numDrops(tier));
+        items = new ArrayList<>();
+        totalItems.subList(0, slayer.numDrops(tier)).forEach(item -> {
+            if (level >= item.getLevel()) {
+                items.add(item);
+            }
+        });
     }
 
     private void printDrops() {
