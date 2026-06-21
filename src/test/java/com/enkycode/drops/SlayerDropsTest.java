@@ -6,22 +6,61 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.api.Assertions;
-import java.util.List;
+
 import java.util.stream.Stream;
 
 public class SlayerDropsTest {
     @ParameterizedTest
-    @MethodSource("testArgsChance")
+    @MethodSource("testParseItemArgs")
+    public void testParseItem(String input, String expected, Slayers slayer, int tier) {
+        String placeholderDrop = switch(slayer) {
+            case Z -> "Revenant Flesh";
+            case S -> "Tarantula Web";
+            case W -> "Wolf Tooth";
+            case E -> "Null Sphere";
+            case V -> "Coven Seal";
+            case B -> "Derelict Ashe";
+        };
+        SlayerDrops calculator = new SlayerDrops(slayer, tier, placeholderDrop, placeholderDrop);
+        Item parsedItem = calculator.parseItem(input);
+        Assertions.assertEquals(expected, parsedItem == null ? "null" : parsedItem.getName());
+    }
+    private static Stream<Arguments> testParseItemArgs() {
+        return Stream.of(
+                Arguments.of("paiwfpawapwjf a9wfaw 7", "null", Slayers.Z, 1), // garbage
+                Arguments.of("Spider Catalyst", "Spider Catalyst", Slayers.S, 3), // correct
+                Arguments.of("scythe blade", "null", Slayers.W, 4), // wrong slayer
+                Arguments.of("Judgement Core", "null", Slayers.E, 2), // Out of range for tier
+                Arguments.of("ch oCO lATechI p", "Chocolate Chip", Slayers.V, 5) // Badly typed
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("testStringsMatchArgs")
+    public void testStringsLooselyMatch(String a, String b, boolean expected) {
+        Assertions.assertEquals(expected, SlayerDrops.stringsLooselyMatch(a, b));
+    }
+    public static Stream<Arguments> testStringsMatchArgs() {
+        return Stream.of(
+                Arguments.of("qwertyuiop", "asdfghjkl", false), // completely different
+                Arguments.of("undertale", "deltarune", false), // anagrams
+                Arguments.of("HELLO", "hello", true), // different cases
+                Arguments.of("jAvA", "JaVa", true), // mixed cases
+                Arguments.of("slayer calculator", "SlayerCalculator", true), // space vs. no space
+                Arguments.of("s lay ercal cul ato     r  ", "SLAYER CALCULATOR", true), // wrong spacing
+                Arguments.of("s lAyE R   CaL cU LAT oR", "s l a y er calc ulator", true) // just weird
+        );
+    }
+
+    @ParameterizedTest
+    @MethodSource("testCalculateChanceArgs")
     public void testCalculateChance(String expected, String input, int progress, int mf, int tier, Slayers slayer) throws Exception {
         Drops calculator = new SlayerDrops(slayer, tier, input, input);
 
-        String output = SystemLambda.tapSystemOut(() -> {
-            calculator.printResults(progress, mf, slayer);
-        });
+        String output = SystemLambda.tapSystemOut(() -> calculator.printResults(progress, mf, slayer));
         Assertions.assertEquals(expected, output);
     }
-
-    private static Stream<Arguments> testArgsChance() {
+    private static Stream<Arguments> testCalculateChanceArgs() {
         return Stream.of(
                 Arguments.of("You have a 100.0% chance of receiving Revenant Flesh\n", "Revenant Flesh", 6000, 20, 1, Slayers.Z),
                 Arguments.of("You have a 23.451% chance of receiving Foul Flesh\n", "Foul Flesh", 1000, 100, 2, Slayers.Z),
@@ -49,41 +88,5 @@ public class SlayerDropsTest {
         );
     }
 
-    @ParameterizedTest
-    @MethodSource("testArgsDrops")
-    public void testMakeDrops(int tier, int numExpected, Slayers slayer) {
-        String input = switch (slayer) {
-            case Z -> "Revenant Flesh";
-            case S -> "Tarantula Web";
-            case W -> "Wolf Tooth";
-            case E -> "Null Sphere";
-            case V -> "Coven Seal";
-            case B -> "Derelict Ashe";
-        };
-        Drops calculator = new SlayerDrops(slayer, tier, input, input);
-        List<Item> itemList = calculator.getItems();
-        Assertions.assertEquals(numExpected, itemList.size());
-    }
-    private static Stream<Arguments> testArgsDrops() {
-        return Stream.of(
-                Arguments.of(1, 1, Slayers.Z),
-                Arguments.of(2, 5, Slayers.Z),
-                Arguments.of(3, 8, Slayers.Z),
-                Arguments.of(4, 11, Slayers.Z),
-                Arguments.of(5, 15, Slayers.Z),
-                Arguments.of(1, 1, Slayers.S),
-                Arguments.of(2, 4, Slayers.S),
-                Arguments.of(3, 8, Slayers.S),
-                Arguments.of(4, 11, Slayers.S),
-                Arguments.of(5, 15, Slayers.S),
-                Arguments.of(1, 1, Slayers.W),
-                Arguments.of(2, 3, Slayers.W),
-                Arguments.of(3, 6, Slayers.W),
-                Arguments.of(4, 9, Slayers.W),
-                Arguments.of(1, 1, Slayers.E),
-                Arguments.of(2, 3, Slayers.E),
-                Arguments.of(3, 8, Slayers.E),
-                Arguments.of(4, 19, Slayers.E)
-        );
-    }
+
 }

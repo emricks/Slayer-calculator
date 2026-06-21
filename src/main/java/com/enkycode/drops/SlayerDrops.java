@@ -34,7 +34,7 @@ public class SlayerDrops implements Drops{
         rngItem = parseItem(meteredItem);
     }
 
-    private Item parseItem(String str) {
+    public Item parseItem(String str) {
         Item foundItem = null;
         for (Item item : items) {
             if (stringsLooselyMatch(str, item.getName())) {
@@ -58,7 +58,7 @@ public class SlayerDrops implements Drops{
         rngItem = getItemFromUser("Which drop is your RNG meter selected on? (Enter 'Nothing' if it's not selected on any drop.)");
     }
 
-    private boolean stringsLooselyMatch(String a, String b) {
+    public static boolean stringsLooselyMatch(String a, String b) {
         return a.toLowerCase().replaceAll(" ", "").contains(b.toLowerCase().replaceAll(" ", ""));
     }
 
