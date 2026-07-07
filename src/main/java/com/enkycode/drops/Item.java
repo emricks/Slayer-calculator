@@ -41,6 +41,9 @@ public class Item {
                 && other.RNGRequired == this.RNGRequired
                 && other.level == this.level;
     }
+    public Item getCopy() {
+        return new Item(name, tierWeights.clone(), table, RNGRequired, level);
+    }
     public String toString() {
         return "\nName: " + name +
                 ", Weights: " +  Arrays.toString(tierWeights) +
